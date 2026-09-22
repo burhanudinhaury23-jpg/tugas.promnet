@@ -1,466 +1,414 @@
 
-
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f3f6fb;
-    color: #26364b;
-    line-height: 1.6;
+    color: #172b4d;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
-h1 {
-    color: #142b4a;
-    margin-bottom: 8px;
-}
 
-h2 {
-    color: #244d7a;
-}
-
-p {
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-a {
-    color: #244d7a;
-    transition: 0.2s;
-}
-
-a:hover {
-    color: #3976c9;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #d6e0ec;
-    margin: 25px 0;
-}
-
-/* Animasi */
-@keyframes muncul {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* Semua halaman */
-.landing-page,
-.home-page,
-.about-page,
-.project-page,
-.contact-page,
-.journey-page {
-    animation: muncul 0.7s ease;
-}
-
-/* =========================
-   2. KOMPONEN BERSAMA
-========================= */
-
-/* Header halaman */
-.home-page header,
-.about-page header {
-    background: linear-gradient(120deg, #10223d, #1e3d66);
-    color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
+header,
+.about-page > h1:first-child,
+.contact-page > h1:first-child,
+.project-page > h1:first-child,
+.journey-page > h1:first-child {
+    background: linear-gradient(100deg, #111d35, #203e68);
+    color: white;
     text-align: center;
-    box-shadow: 0 3px 12px rgba(20, 43, 74, 0.12);
+    font-size: 38px;
+    padding: 25px 10px 25px;
+    margin: 0;
 }
 
-.home-page header h1,
-.home-page header h2,
-.about-page header h1,
-.about-page header h2 {
-    color: #ffffff;
+header h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
 }
 
-/* Navigasi */
+header p,
+.about-page > p:first-of-type,
+.project-page > p:first-of-type,
+.journey-page > p:first-of-type {
+    background-color: #203e68;
+    color: #eaf1fc;
+    text-align: center;
+    font-size: 15px;
+    padding: 25px;
+    margin: 0;
+}
+
 nav {
-    background-color: #ffffff;
-    padding: 18px 24px;
-    border-radius: 12px;
-    margin: 15px 0 20px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(20, 43, 74, 0.08);
+    background-color: white;
+    width: 90%;
+    max-width: 1610px;
+    margin: 25px auto 20px;
+    padding: 20px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(17, 29, 53, 0.06);
 }
 
 nav a {
-    display: inline-block;
-    color: #24415f;
+    color: #203e68;
     text-decoration: none;
-    margin: 5px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: #3976c9;
+    color: white;
+    background-color: #203e68;
 }
 
-/* Kotak konten umum */
-.home-page main,
-.about-page > p,
-.project-page p,
-.journey-page p {
-    background-color: #ffffff;
-    padding: 15px 20px;
-    border-radius: 8px;
+hr {
+    width: 90%;
+    max-width: 1610px;
+    margin: 0 auto 60px;
+    border: none;
+    border-top: 2px solid #dce5f1;
 }
 
-/* Kotak biru muda */
-.home-page main > p,
-.about-page > p,
-.contact-page ul,
-.journey-page h2,
-.project-page h2 {
-    background-color: #edf3fa;
-    border-left: 5px solid #244d7a;
-    border-radius: 8px;
+
+
+main,
+.about-page > h1:not(:first-child),
+.project-page > h1:not(:first-child),
+.journey-page > h1:not(:first-child) {
+    width: 90%;
+    max-width: 1610px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Gambar */
-.home-page main > img,
-.project-page h2 + img,
-.journey-page h2 + img {
-    object-fit: cover;
-    border: 4px solid #c4d4e8;
-    transition: 0.2s;
+main {
+    padding-bottom: 70px;
 }
 
-.home-page main > img:hover,
-.project-page h2 + img:hover,
-.journey-page h2 + img:hover {
-    transform: scale(1.03);
+main h1,
+.about-page > h1:not(:first-child),
+.project-page > h1:not(:first-child),
+.journey-page > h1:not(:first-child) {
+    color: #172b4d;
+    font-size: 32px;
+    border-left: 7px solid #2563eb;
+    padding: 5px 0 5px 28px;
+    margin-top: 45px;
+    margin-bottom: 25px;
 }
 
-/* Tabel */
-.about-page table,
-.project-page table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0 25px;
-}
-
-.about-page th,
-.project-page th {
-    background-color: #1e3d66;
-    color: #ffffff;
-    text-align: left;
-}
-
-.about-page th,
-.about-page td,
-.project-page th,
-.project-page td {
-    padding: 10px;
-    border: 1px solid #d6e0ec;
-}
-
-.about-page td,
-.project-page td {
-    background-color: #ffffff;
-}
-
-.project-page td,
-.project-page th {
-    overflow-wrap: anywhere;
-}
-
-/* Daftar */
-.home-page main ol,
-.about-page ul,
-.project-page ul,
-.contact-page ul {
-    padding: 15px 20px 15px 40px;
-    border-radius: 8px;
-}
-
-.home-page main ol,
-.about-page ul,
-.project-page ul {
-    background-color: #edf3fa;
-    border-left: 5px solid #7189a8;
-}
-
-.home-page li,
-.about-page li,
-.project-page li,
-.contact-page li {
-    margin-bottom: 7px;
-}
-
-/* =========================
-   3. HALAMAN INDEX
-========================= */
-
-.landing-page header {
-    background: linear-gradient(120deg, #10223d, #1e3d66);
-    color: #ffffff;
-    text-align: center;
-    padding: 55px 25px;
-    margin: -25px -25px 25px;
-}
-
-.landing-page h1,
-.landing-page .judul-website {
-    color: #ffffff;
-}
-
-.landing-page p,
-.landing-page .deskripsi-website {
-    color: #e8eef7;
-}
-
-.deskripsi-website {
-    background-color: #1e3d66;
-    padding: 18px 20px;
-    border-radius: 8px;
-}
-
-/* =========================
-   4. HALAMAN HOME
-========================= */
-
-.home-page main {
-    margin-top: 20px;
-    padding: 25px;
-    box-shadow: 0 3px 12px rgba(20, 43, 74, 0.06);
-}
-
-.home-page main > img {
-    display: block;
-    width: 230px;
-    height: 230px;
-    margin: 15px 0;
-}
-
-.home-page main > p {
-    border-left: 5px solid #244d7a;
-}
-
-.home-page main ol {
-    background-color: #f4f7fb;
-}
-
-/* =========================
-   5. HALAMAN ABOUT
-========================= */
-
-.about-page > h1:nth-of-type(2) {
-    margin-top: 25px;
-    text-align: center;
-}
-
-.about-page > p {
-    border-left: 5px solid #244d7a;
-}
-
-/* =========================
-   6. HALAMAN PROJECT
-========================= */
-
-.project-page > img:first-of-type {
-    display: block;
-    width: 300px;
-    margin: 15px 0 25px;
-    border: 4px solid #c4d4e8;
-}
-
+main h2,
 .project-page h2,
+.contact-page h2,
 .journey-page h2 {
-    padding: 12px 15px;
-    margin-top: 25px;
+    color: #203e68;
+    font-size: 27px;
+    margin: 35px auto 20px;
+    margin-left: 5%;
 }
 
-.project-page h2 + img {
-    width: 300px;
-    height: 200px;
-    margin: 10px 0;
-}
-
-.project-page ul {
-    background-color: #edf3fa;
-}
-
-.project-page tr:first-child td {
-    background-color: #1e3d66;
-    color: #ffffff;
-}
-
-/* =========================
-   7. HALAMAN CONTACT
-========================= */
-
-.contact-page > h1:first-child {
-    text-align: center;
-}
-
-.contact-page h2 {
-    margin-top: 25px;
-}
-
-.contact-page ul {
-    background-color: #edf3fa;
-}
-
-.contact-page li a {
-    color: #244d7a;
-    font-weight: bold;
-}
-
-/* Form */
-.contact-page form {
-    background-color: #ffffff;
-    padding: 18px;
-    border: 1px solid #d6e0ec;
-    border-left: 5px solid #7189a8;
-    border-radius: 10px;
-    overflow-x: auto;
-}
-
-.contact-page form table {
+main h2 {
     width: 100%;
+}
+
+
+main p,
+.about-page > p:not(:first-of-type),
+.contact-page p,
+.project-page > p:not(:first-of-type),
+.journey-page > p:not(:first-of-type) {
+    color: #43536b;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.about-page > p:not(:first-of-type),
+.project-page > p:not(:first-of-type),
+.journey-page > p:not(:first-of-type) {
+    width: 90%;
+    max-width: 1610px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+main img,
+.project-page img,
+.journey-page img {
+    display: block;
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    margin: 25px auto 30px;
+    border: 5px solid white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(17, 29, 53, 0.12);
+    transition: 0.3s ease;
+}
+
+main img:hover,
+.project-page img:hover,
+.journey-page img:hover {
+    transform: translateY(-4px);
+}
+
+main ol,
+.about-page ul,
+.contact-page ul,
+.project-page ul {
+    width: 90%;
+    max-width: 1610px;
+    margin: 20px auto 35px;
+    padding: 25px 35px 25px 60px;
+    background-color: white;
+    border-left: 5px solid #2563eb;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(17, 29, 53, 0.05);
+}
+
+main ol li,
+.about-page ul li,
+.contact-page ul li,
+.project-page ul li {
+    color: #43536b;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+main ol li::marker,
+.about-page ul li::marker,
+.contact-page ul li::marker,
+.project-page ul li::marker {
+    color: #2563eb;
+}
+
+.about-page table,
+.project-page table,
+.contact-page form table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto 50px;
     border-collapse: collapse;
-    margin: 10px 0;
+    background-color: white;
+    box-shadow: 0 5px 25px rgba(17, 29, 53, 0.06);
+}
+
+.about-page table th,
+.project-page table th {
+    background-color: #203e68;
+    color: white;
+    padding: 15px;
+}
+
+.about-page table td,
+.project-page table td {
+    padding: 15px;
+    border: 1px solid #dce5f1;
+    color: #43536b;
+}
+
+.about-page table tr:nth-child(even),
+.project-page table tr:nth-child(even) {
+    background-color: #f3f6fb;
+}
+
+.contact-page form {
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto 60px;
 }
 
 .contact-page form td {
-    padding: 9px;
-    border: 1px solid #d6e0ec;
-    background-color: #f7f9fc;
+    padding: 15px;
+    border: 1px solid #dce5f1;
+    color: #43536b;
 }
 
-.contact-page .label {
-    width: 180px;
-    font-weight: bold;
-}
-
-/* Input */
-.contact-page input[type="text"],
-.contact-page input[type="email"],
-.contact-page input[type="date"],
-.contact-page select,
-.contact-page textarea {
+.contact-page form input,
+.contact-page form select,
+.contact-page form textarea {
     max-width: 100%;
-    padding: 8px;
-    border: 1px solid #b8c8da;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #172b4d;
+    background-color: #f8faff;
+    border: 1px solid #cbd7e8;
+    border-radius: 8px;
 }
 
-.contact-page input[type="text"],
-.contact-page input[type="email"],
-.contact-page textarea {
-    width: 100%;
+.contact-page form input:focus,
+.contact-page form select:focus,
+.contact-page form textarea:focus {
+    border-color: #2563eb;
+    outline: none;
 }
 
-.contact-page textarea {
-    resize: vertical;
-}
-
-/* Tombol */
-.contact-page input[type="submit"],
-.contact-page input[type="reset"] {
-    background-color: #1e3d66;
-    color: #ffffff;
-    border: none;
-    padding: 9px 16px;
-    margin: 3px;
-    border-radius: 5px;
+.contact-page form input[type="submit"],
+.contact-page form input[type="reset"] {
+    background-color: #203e68;
+    color: white;
     cursor: pointer;
+    margin: 5px;
 }
 
-.contact-page input[type="submit"]:hover,
-.contact-page input[type="reset"]:hover {
-    background-color: #315987;
+.contact-page form input[type="reset"] {
+    background-color: #e5ebf4;
+    color: #203e68;
 }
 
-/* =========================
-   8. HALAMAN PERJALANAN
-========================= */
 
-.journey-page > h1:first-child,
-.journey-page > p:first-of-type {
-    text-align: center;
+.project-page a,
+.contact-page ul a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.journey-page h2 + img {
-    width: 300px;
-    height: 220px;
-    margin: 10px 12px 10px 0;
+.project-page a:hover,
+.contact-page ul a:hover {
+    text-decoration: underline;
 }
 
-/* =========================
-   9. RESPONSIVE
-========================= */
 
-@media screen and (max-width: 700px) {
-    body {
-        padding: 12px;
+@media (max-width: 1200px) {
+    nav {
+        gap: 20px;
     }
 
-    .landing-page header {
-        margin: -12px -12px 20px;
-        padding: 35px 18px;
+    header h1 {
+        font-size: 40px;
+    }
+
+    main h1,
+    .about-page > h1:not(:first-child),
+    .project-page > h1:not(:first-child),
+    .journey-page > h1:not(:first-child) {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    header,
+    .about-page > h1,
+    .contact-page > h1,
+    .project-page > h1,
+    .journey-page > h1 {
+        font-size: 30px;
+        padding: 35px 20px 20px;
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    header p,
+    .about-page > p:first-of-type,
+    .project-page > p:first-of-type,
+    .journey-page > p:first-of-type {
+        font-size: 16px;
+        padding: 20px;
     }
 
     nav {
-        padding: 12px;
+        margin: 30px auto;
+        padding: 20px 15px;
+        gap: 10px;
+        border-radius: 15px;
     }
 
     nav a {
-        margin: 5px 10px;
+        font-size: 16px;
+        padding: 8px 10px;
     }
 
-    .home-page header,
-    .home-page main,
-    .about-page header {
-        padding: 15px;
+    hr {
+        margin-bottom: 40px;
     }
 
-    .home-page main > img,
-    .project-page h2 + img,
-    .journey-page h2 + img {
-        width: 100%;
-        height: auto;
+    main {
+        width: 90%;
+        padding-bottom: 40px;
     }
 
-    .project-page > img:first-of-type {
-        width: 100%;
+    main h1,
+    .about-page > h1:not(:first-child),
+    .project-page > h1:not(:first-child),
+    .journey-page > h1:not(:first-child) {
+        font-size: 25px;
+        padding-left: 18px;
+        margin-top: 35px;
+    }
+
+    main h2,
+    .project-page h2,
+    .journey-page h2 {
+        font-size: 22px;
+    }
+
+    main p,
+    .about-page > p:not(:first-of-type),
+    .contact-page p,
+    .project-page > p:not(:first-of-type),
+    .journey-page > p:not(:first-of-type) {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    main ol,
+    .about-page ul,
+    .contact-page ul,
+    .project-page ul {
+        padding: 20px 20px 20px 45px;
+    }
+
+    main ol li,
+    .about-page ul li,
+    .contact-page ul li,
+    .project-page ul li {
+        font-size: 16px;
     }
 
     .about-page table,
-    .project-page table {
+    .project-page table,
+    .contact-page form table {
+        display: block;
+        overflow-x: auto;
         font-size: 14px;
     }
 
-    .about-page th,
-    .about-page td,
-    .project-page th,
-    .project-page td {
-        padding: 7px;
+    .about-page table td,
+    .about-page table th,
+    .project-page table td,
+    .project-page table th,
+    .contact-page form td {
+        padding: 10px;
     }
 
-    .contact-page form {
-        padding: 8px;
-    }
-
-    .contact-page .label {
-        width: auto;
+    .contact-page form input,
+    .contact-page form select,
+    .contact-page form textarea {
+        width: 100%;
     }
 }
