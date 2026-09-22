@@ -1,0 +1,466 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 25px;
+    background-color: #f3f6fb;
+    color: #26364b;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #142b4a;
+    margin-bottom: 8px;
+}
+
+h2 {
+    color: #244d7a;
+}
+
+p {
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+a {
+    color: #244d7a;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #3976c9;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #d6e0ec;
+    margin: 25px 0;
+}
+
+/* Animasi */
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Semua halaman */
+.landing-page,
+.home-page,
+.about-page,
+.project-page,
+.contact-page,
+.journey-page {
+    animation: muncul 0.7s ease;
+}
+
+/* =========================
+   2. KOMPONEN BERSAMA
+========================= */
+
+/* Header halaman */
+.home-page header,
+.about-page header {
+    background: linear-gradient(120deg, #10223d, #1e3d66);
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(20, 43, 74, 0.12);
+}
+
+.home-page header h1,
+.home-page header h2,
+.about-page header h1,
+.about-page header h2 {
+    color: #ffffff;
+}
+
+/* Navigasi */
+nav {
+    background-color: #ffffff;
+    padding: 18px 24px;
+    border-radius: 12px;
+    margin: 15px 0 20px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(20, 43, 74, 0.08);
+}
+
+nav a {
+    display: inline-block;
+    color: #24415f;
+    text-decoration: none;
+    margin: 5px 18px;
+}
+
+nav a:hover {
+    color: #3976c9;
+}
+
+/* Kotak konten umum */
+.home-page main,
+.about-page > p,
+.project-page p,
+.journey-page p {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+/* Kotak biru muda */
+.home-page main > p,
+.about-page > p,
+.contact-page ul,
+.journey-page h2,
+.project-page h2 {
+    background-color: #edf3fa;
+    border-left: 5px solid #244d7a;
+    border-radius: 8px;
+}
+
+/* Gambar */
+.home-page main > img,
+.project-page h2 + img,
+.journey-page h2 + img {
+    object-fit: cover;
+    border: 4px solid #c4d4e8;
+    transition: 0.2s;
+}
+
+.home-page main > img:hover,
+.project-page h2 + img:hover,
+.journey-page h2 + img:hover {
+    transform: scale(1.03);
+}
+
+/* Tabel */
+.about-page table,
+.project-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px;
+}
+
+.about-page th,
+.project-page th {
+    background-color: #1e3d66;
+    color: #ffffff;
+    text-align: left;
+}
+
+.about-page th,
+.about-page td,
+.project-page th,
+.project-page td {
+    padding: 10px;
+    border: 1px solid #d6e0ec;
+}
+
+.about-page td,
+.project-page td {
+    background-color: #ffffff;
+}
+
+.project-page td,
+.project-page th {
+    overflow-wrap: anywhere;
+}
+
+/* Daftar */
+.home-page main ol,
+.about-page ul,
+.project-page ul,
+.contact-page ul {
+    padding: 15px 20px 15px 40px;
+    border-radius: 8px;
+}
+
+.home-page main ol,
+.about-page ul,
+.project-page ul {
+    background-color: #edf3fa;
+    border-left: 5px solid #7189a8;
+}
+
+.home-page li,
+.about-page li,
+.project-page li,
+.contact-page li {
+    margin-bottom: 7px;
+}
+
+/* =========================
+   3. HALAMAN INDEX
+========================= */
+
+.landing-page header {
+    background: linear-gradient(120deg, #10223d, #1e3d66);
+    color: #ffffff;
+    text-align: center;
+    padding: 55px 25px;
+    margin: -25px -25px 25px;
+}
+
+.landing-page h1,
+.landing-page .judul-website {
+    color: #ffffff;
+}
+
+.landing-page p,
+.landing-page .deskripsi-website {
+    color: #e8eef7;
+}
+
+.deskripsi-website {
+    background-color: #1e3d66;
+    padding: 18px 20px;
+    border-radius: 8px;
+}
+
+/* =========================
+   4. HALAMAN HOME
+========================= */
+
+.home-page main {
+    margin-top: 20px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(20, 43, 74, 0.06);
+}
+
+.home-page main > img {
+    display: block;
+    width: 230px;
+    height: 230px;
+    margin: 15px 0;
+}
+
+.home-page main > p {
+    border-left: 5px solid #244d7a;
+}
+
+.home-page main ol {
+    background-color: #f4f7fb;
+}
+
+/* =========================
+   5. HALAMAN ABOUT
+========================= */
+
+.about-page > h1:nth-of-type(2) {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.about-page > p {
+    border-left: 5px solid #244d7a;
+}
+
+/* =========================
+   6. HALAMAN PROJECT
+========================= */
+
+.project-page > img:first-of-type {
+    display: block;
+    width: 300px;
+    margin: 15px 0 25px;
+    border: 4px solid #c4d4e8;
+}
+
+.project-page h2,
+.journey-page h2 {
+    padding: 12px 15px;
+    margin-top: 25px;
+}
+
+.project-page h2 + img {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+}
+
+.project-page ul {
+    background-color: #edf3fa;
+}
+
+.project-page tr:first-child td {
+    background-color: #1e3d66;
+    color: #ffffff;
+}
+
+/* =========================
+   7. HALAMAN CONTACT
+========================= */
+
+.contact-page > h1:first-child {
+    text-align: center;
+}
+
+.contact-page h2 {
+    margin-top: 25px;
+}
+
+.contact-page ul {
+    background-color: #edf3fa;
+}
+
+.contact-page li a {
+    color: #244d7a;
+    font-weight: bold;
+}
+
+/* Form */
+.contact-page form {
+    background-color: #ffffff;
+    padding: 18px;
+    border: 1px solid #d6e0ec;
+    border-left: 5px solid #7189a8;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.contact-page form table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.contact-page form td {
+    padding: 9px;
+    border: 1px solid #d6e0ec;
+    background-color: #f7f9fc;
+}
+
+.contact-page .label {
+    width: 180px;
+    font-weight: bold;
+}
+
+/* Input */
+.contact-page input[type="text"],
+.contact-page input[type="email"],
+.contact-page input[type="date"],
+.contact-page select,
+.contact-page textarea {
+    max-width: 100%;
+    padding: 8px;
+    border: 1px solid #b8c8da;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-page input[type="text"],
+.contact-page input[type="email"],
+.contact-page textarea {
+    width: 100%;
+}
+
+.contact-page textarea {
+    resize: vertical;
+}
+
+/* Tombol */
+.contact-page input[type="submit"],
+.contact-page input[type="reset"] {
+    background-color: #1e3d66;
+    color: #ffffff;
+    border: none;
+    padding: 9px 16px;
+    margin: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-page input[type="submit"]:hover,
+.contact-page input[type="reset"]:hover {
+    background-color: #315987;
+}
+
+/* =========================
+   8. HALAMAN PERJALANAN
+========================= */
+
+.journey-page > h1:first-child,
+.journey-page > p:first-of-type {
+    text-align: center;
+}
+
+.journey-page h2 + img {
+    width: 300px;
+    height: 220px;
+    margin: 10px 12px 10px 0;
+}
+
+/* =========================
+   9. RESPONSIVE
+========================= */
+
+@media screen and (max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+
+    .landing-page header {
+        margin: -12px -12px 20px;
+        padding: 35px 18px;
+    }
+
+    nav {
+        padding: 12px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+    }
+
+    .home-page header,
+    .home-page main,
+    .about-page header {
+        padding: 15px;
+    }
+
+    .home-page main > img,
+    .project-page h2 + img,
+    .journey-page h2 + img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-page > img:first-of-type {
+        width: 100%;
+    }
+
+    .about-page table,
+    .project-page table {
+        font-size: 14px;
+    }
+
+    .about-page th,
+    .about-page td,
+    .project-page th,
+    .project-page td {
+        padding: 7px;
+    }
+
+    .contact-page form {
+        padding: 8px;
+    }
+
+    .contact-page .label {
+        width: auto;
+    }
+}
